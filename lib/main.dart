@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sort_child_properties_last
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -7,138 +9,186 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        drawer: Drawer(
-          child: Directionality(
-            textDirection: TextDirection.rtl,
-            child: ListView(
-              padding: EdgeInsets.all(20),
-              children: [
-                SizedBox(height: 50),
-                ListTile(
-                  title: Text('الرئيسية'),
-                  trailing: Icon(Icons.arrow_forward_ios_rounded),
-                ),
-                ListTile(
-                  title: Text('الملف الشخصي'),
-                  trailing: Icon(Icons.arrow_forward_ios_rounded),
-                ),
-                ListTile(
-                  title: Text('من نحن'),
-                  trailing: Icon(Icons.arrow_forward_ios_rounded),
-                ),
-                ListTile(
-                  title: Text('شروط الاستخدام والخصوصية'),
-                  trailing: Icon(Icons.arrow_forward_ios_rounded),
-                ),
-                ListTile(
-                  title: Text('تواصل معنا'),
-                  trailing: Icon(Icons.arrow_forward_ios_rounded),
-                ),
-              ],
-            ),
-          ),
-        ),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.white,
         appBar: AppBar(
-          // leading: Icon(Icons.arrow_back),
           elevation: 0,
+          backgroundColor: Colors.white,
         ),
         body: Directionality(
-          textDirection: TextDirection.rtl,
-          child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 42, vertical: 35),
-            margin: EdgeInsets.only(top: 15),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(38), topRight: Radius.circular(38)),
-            ),
-            child: ListView(children: [
-              Text('data'),
-              ListView.separated(
-                physics: NeverScrollableScrollPhysics(),
-                shrinkWrap: true,
-                itemCount: 5,
-                itemBuilder: (context, index) {
-                  return Container(
-                      // height: 147,
-                      child: Column(
+            textDirection: TextDirection.rtl,
+            child: ListView(
+              padding: EdgeInsets.symmetric(horizontal: 26),
+              children: [
+                ListTile(
+                  leading:
+                      Image.asset('assets/images/unsplash_DItYlc26zVI.png'),
+                  title: Row(
+                    children: [
+                      Text(
+                        'مرحبا بك',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                      Text(
+                        ' , أحمد !',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 20),
+                      )
+                    ],
+                  ),
+                  subtitle: Text(
+                    'الجمعة , 3 أغسطس',
+                    style: TextStyle(fontSize: 12),
+                  ),
+                  trailing: Icon(
+                    Icons.menu,
+                    size: 30,
+                    color: Color(0xff0092ca),
+                  ),
+                ),
+                SizedBox(
+                  height: 42,
+                ),
+                Row(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.symmetric(horizontal: 15),
+                      height: 41,
+                      width: 150,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color(0xff0092ca),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                        onPressed: () {},
+                        child: Text(
+                          'ايجاد حلاق',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 15),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.symmetric(horizontal: 12),
+                      height: 41,
+                      width: 150,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color(0xff0092ca),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                        onPressed: () {},
+                        child: Text(
+                          'مواعيدي',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 15),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 26,
+                ),
+                Container(
+                  margin: EdgeInsets.symmetric(horizontal: 18),
+                  child: Text(
+                    'اخر الحجوزات',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
+                  ),
+                ),
+                SizedBox(height: 10),
+                Container(
+                  margin: EdgeInsets.symmetric(horizontal: 15),
+
+                  //  clipBehavior: Clip.antiAliasWithSaveLayer,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                            blurRadius: 20,
+                            color: Color.fromARGB(255, 199, 198, 198))
+                      ]),
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        'assets/images/unsplash_EW_rqoSdDes.png',
+                        fit: BoxFit.cover,
+                      ),
+                      Column(
                         children: [
                           Row(
-                            // mainAxisAlignment: MainAxisAlignment.s,
                             children: [
-                              Text('اسم المتجر'),
+                              Container(
+                                margin: EdgeInsets.only(right: 30),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.cut,
+                                        color: Color(0xff0092ca), size: 15),
+                                    SizedBox(width: 10),
+                                    Text(
+                                      'اسم الحلاق',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 12),
+                                    ),
+                                  ],
+                                ),
+                              ),
                               Spacer(),
-                              Text('مثال اسم المتجر'),
+                              Container(
+                                margin: EdgeInsets.only(left: 50),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.date_range,
+                                        color: Color(0xff0092ca), size: 15),
+                                    SizedBox(width: 10),
+                                    Text(
+                                      '12/10/2023',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 12),
+                                    ),
+                                  ],
+                                ),
+                              ),
                             ],
                           ),
-                          Divider(
-                            height: 40,
-                            // color: Colors.red,
-                            // thickness: 10,
+                          SizedBox(
+                            height: 16,
                           ),
-                          Row(
-                            // mainAxisAlignment: MainAxisAlignment.s,
-                            children: [
-                              Text('اسم الحلاق'),
-                              Spacer(),
-                              Text('مثال اسم الحلاق'),
-                            ],
-                          ),
-                          Divider(
-                            height: 40,
-                          ),
-                          Row(
-                            // mainAxisAlignment: MainAxisAlignment.s,
-                            children: [
-                              Text('تاريخ و وقت الحجز'),
-                              Spacer(),
-                              Text('13 Nov - 4:30 pm'),
-                            ],
-                          ),
-                          Divider(
-                            height: 40,
-                          ),
-                          Row(
-                            // mainAxisAlignment: MainAxisAlignment.s,
-                            children: [
-                              Text('السعر'),
-                              Spacer(),
-                              Text('120 د.ع'),
-                            ],
+                          Container(
+                            margin: EdgeInsets.only(right: 30, bottom: 10),
+                            child: Row(
+                              children: [
+                                Icon(Icons.circle,
+                                    color: Color(0xff0092ca), size: 15),
+                                SizedBox(width: 10),
+                                Text(
+                                  'اسم الخدمة',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 12),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
-                      ),
-                      margin: EdgeInsets.symmetric(horizontal: 10),
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(15),
-                          boxShadow: [
-                            BoxShadow(
-                                // offset
-                                offset: Offset(0, 10),
-                                color: Colors.black.withOpacity(.12),
-                                blurRadius: 20,
-                                spreadRadius: 0)
-                          ]));
-                },
-                separatorBuilder: (BuildContext context, index) {
-                  return SizedBox(
-                    height: 20,
-                  );
-                },
-              ),
-            ]),
-          ),
-        ),
+                      )
+                    ],
+                  ),
+                )
+              ],
+            )),
       ),
     );
   }
