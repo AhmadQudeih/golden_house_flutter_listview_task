@@ -72,7 +72,7 @@ class MyApp extends StatelessWidget {
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Icon(Icons.cut_rounded),
+                            Icon(Icons.cut_rounded,size: 22),
                             SizedBox(
                               width: 24,
                             ),
@@ -102,7 +102,7 @@ class MyApp extends StatelessWidget {
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Icon(Icons.access_time_sharp),
+                            Icon(Icons.access_time_sharp,size: 22),
                             SizedBox(
                               width: 24,
                             ),
@@ -159,7 +159,7 @@ class MyApp extends StatelessWidget {
                                 margin: EdgeInsets.only(right: 30),
                                 child: Row(
                                   children: [
-                                    Icon(Icons.cut,
+                                    Icon(Icons.cut_rounded,
                                         color: Color(0xff0092ca), size: 15),
                                     SizedBox(width: 10),
                                     Text(
