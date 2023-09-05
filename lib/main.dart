@@ -72,7 +72,7 @@ class MyApp extends StatelessWidget {
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Icon(Icons.cut_rounded,size: 22),
+                            Icon(Icons.cut_rounded, size: 22),
                             SizedBox(
                               width: 24,
                             ),
@@ -102,7 +102,7 @@ class MyApp extends StatelessWidget {
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Icon(Icons.access_time_sharp,size: 22),
+                            Icon(Icons.access_time_sharp, size: 22),
                             SizedBox(
                               width: 24,
                             ),
@@ -135,8 +135,6 @@ class MyApp extends StatelessWidget {
                 SizedBox(height: 10),
                 Container(
                   margin: EdgeInsets.symmetric(horizontal: 15),
-
-                  //  clipBehavior: Clip.antiAliasWithSaveLayer,
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10),
