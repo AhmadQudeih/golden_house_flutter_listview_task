@@ -31,18 +31,20 @@ class MyApp extends StatelessWidget {
                     children: [
                       Text(
                         'مرحبا بك',
-                        style: TextStyle(fontSize: 20),
+                        style: TextStyle(fontSize: 20, fontFamily: 'Myfont'),
                       ),
                       Text(
                         ' , أحمد !',
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 20),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                            fontFamily: 'Myfont'),
                       )
                     ],
                   ),
                   subtitle: Text(
                     'الجمعة , 3 أغسطس',
-                    style: TextStyle(fontSize: 12),
+                    style: TextStyle(fontSize: 12, fontFamily: 'Myfont'),
                   ),
                   trailing: Icon(
                     Icons.menu,
@@ -67,10 +69,21 @@ class MyApp extends StatelessWidget {
                           ),
                         ),
                         onPressed: () {},
-                        child: Text(
-                          'ايجاد حلاق',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 15),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Icon(Icons.cut_rounded),
+                            SizedBox(
+                              width: 24,
+                            ),
+                            Text(
+                              'ايجاد حلاق',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 15,
+                                  fontFamily: 'Myfont'),
+                            ),
+                          ],
                         ),
                       ),
                     ),
@@ -86,10 +99,21 @@ class MyApp extends StatelessWidget {
                           ),
                         ),
                         onPressed: () {},
-                        child: Text(
-                          'مواعيدي',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 15),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Icon(Icons.access_time_sharp),
+                            SizedBox(
+                              width: 24,
+                            ),
+                            Text(
+                              'مواعيدي',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 15,
+                                  fontFamily: 'Myfont'),
+                            ),
+                          ],
                         ),
                       ),
                     ),
@@ -102,7 +126,10 @@ class MyApp extends StatelessWidget {
                   margin: EdgeInsets.symmetric(horizontal: 18),
                   child: Text(
                     'اخر الحجوزات',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 17,
+                        fontFamily: 'Myfont'),
                   ),
                 ),
                 SizedBox(height: 10),
@@ -139,7 +166,8 @@ class MyApp extends StatelessWidget {
                                       'اسم الحلاق',
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold,
-                                          fontSize: 12),
+                                          fontSize: 12,
+                                          fontFamily: 'Myfont'),
                                     ),
                                   ],
                                 ),
@@ -156,7 +184,8 @@ class MyApp extends StatelessWidget {
                                       '12/10/2023',
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold,
-                                          fontSize: 12),
+                                          fontSize: 12,
+                                          fontFamily: 'Myfont'),
                                     ),
                                   ],
                                 ),
@@ -177,7 +206,8 @@ class MyApp extends StatelessWidget {
                                   'اسم الخدمة',
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 12),
+                                      fontSize: 12,
+                                      fontFamily: 'Myfont'),
                                 ),
                               ],
                             ),
