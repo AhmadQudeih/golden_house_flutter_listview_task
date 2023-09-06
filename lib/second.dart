@@ -85,10 +85,10 @@ class Second extends StatelessWidget {
                                   Text(
                                     'اوقات التواجد',
                                     style: TextStyle(
-                                      fontFamily: 'Myfont',
-                                      fontSize: 10,
-                                      color: Color(0xff0092ca),
-                                    ),
+                                        fontFamily: 'Myfont',
+                                        fontSize: 10,
+                                        color: Color(0xff0092ca),
+                                        decoration: TextDecoration.underline),
                                   ),
                                   SizedBox(width: 22),
                                   Icon(
@@ -126,4 +126,3 @@ class Second extends StatelessWidget {
     );
   }
 }
-
